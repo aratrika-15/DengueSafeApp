@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'Statistics.dart';
+import 'GovtDatabase.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -16,6 +18,10 @@ class _MapAndStatisticsState extends State<MapAndStatistics> {
   GoogleMapController mapController;
 
   final LatLng _center = const LatLng(1.3483, 103.6831);
+
+  Future navigateToSubPage(context, func) async {
+    Navigator.push(context, MaterialPageRoute(builder: (context) => func));
+  }
 
   void _onMapCreated(GoogleMapController controller) {
     mapController = controller;
@@ -45,11 +51,13 @@ class _MapAndStatisticsState extends State<MapAndStatistics> {
                 child: GoogleMap(
                   mapType: MapType.normal,
                   initialCameraPosition:
-                      CameraPosition(target: _center, zoom: 15),
+                  CameraPosition(target: _center, zoom: 15),
                 )),
             SizedBox(height: 5.0),
             RaisedButton.icon(
-              onPressed: () {},
+              onPressed: () {
+                navigateToSubPage(context, GovtDatabase());
+              },
               icon: Icon(
                 Icons.bubble_chart,
                 color: Colors.white,
@@ -60,6 +68,7 @@ class _MapAndStatisticsState extends State<MapAndStatistics> {
                   )),
               color: Colors.deepPurpleAccent[700],
             ),
+
           ],
         ));
   }
