@@ -1,16 +1,8 @@
-# flutter_app
+# Dengue Safe App
 
-A new Flutter application.
+Project for CZ2006- Software Engineering at Nanyang Technological University
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## This flutter app has the following functionality:
+- Allowing admin users to report on campus dengue cases
+- Visually representing the number of cases in ach NTU Hall on Google Maps
+- Analysing government data on dengue cases in Singapore
